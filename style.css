@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+:root {
+    --container-bg:  hsl(210, 46%, 95%);
+
+    --item-1-bg:hsl(263, 55%, 52%);
+    --item-2-bg: hsl(217, 19%, 35%);
+    --item-3-4-bg:hsl(0, 0%, 100%);
+    --item-5-bg: hsl(219, 29%, 14%);
+
+    --grid-container-max-width: 1300px;
+
+    --primary-color: #f4f4f4;
+    --secondary-color: #ccc;
+}
+
+/* Utility */
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1 {
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--secondary-color);
+}
+
+#main {
+    background: var(--container-bg);
+    height: 100%;
+}
+
+#main .container {
+    padding: 10rem;
+}
+
+#main .grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    max-width: var(--grid-container-max-width);
+    margin: auto;
+}
+
+#main .grid-container .grid-item {
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+#main .grid-container .item-1 {
+    background: var(--item-1-bg);
+}
+
+#main .grid-container .item-2 {
+    background: var(--item-2-bg);
+}
+
+#main .grid-container .item-3 {
+    background: var(--item-3-4-bg);
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    
+}
+
+#main .grid-container .item-4 {
+    background: var(--item-3-4-bg);
+    width: 50%;
+}
+
+#main .item-5 {
+    background: var(--item-5-bg);
+    color: #444;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#main .grid-container .flexbox-container {
+    display: flex;
+    padding: 1rem;
+}
+
+#main .grid-container .flexbox-container img {
+    border-radius: 50%;
+}
+
